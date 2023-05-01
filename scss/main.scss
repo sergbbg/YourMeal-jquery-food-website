@@ -1,0 +1,12 @@
+@import 'absrtacts/_variable';
+@import 'absrtacts/_mixins';
+@import 'layout/_header';
+@import 'layout/_main-part';
+body {
+   margin: 0;
+   padding: 0;
+   font-family: $main_font;
+   height: 100%;
+   
+ }
+

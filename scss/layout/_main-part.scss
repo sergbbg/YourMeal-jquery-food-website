@@ -1,0 +1,23 @@
+.nav__catalog__item-button{
+   @extend %button-categ;
+   background-color:#fff;
+  
+   margin-left: 20px;
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+   img{
+      padding-right: 8px;
+   }
+}
+.nav__catalog__item-button:hover{
+   background-color: #FFAB08;
+
+}
+
+.nav__catalog{
+   display: flex;
+   justify-content: center;
+   background-color:#f9f9f9;
+   padding-top: 40px;
+}
