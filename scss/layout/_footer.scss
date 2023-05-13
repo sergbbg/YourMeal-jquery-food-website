@@ -1,57 +1,81 @@
 .footer{
    display: flex;
    flex-wrap: wrap;
-   align-items: center;
-   height: 280px;
+   height: 200px;
+   align-content: center;
+   padding-left: 30px;
 }
-
 .logo_footer{
    width: 50%;
-
 }
-.tel_footer, .soc_footer {
-   width: 20%;
+
+.footer_informBox{
+   width: 25%;
    font-weight: 400;
-   font-size: 24px;
    font-style: normal;
-   P{
-    padding-bottom: 10px;  
+      P:first-child{
+         padding-bottom: 20px;  
+         font-size: 24px;
+     }
+}
+
+.tel{
+   font-size: 16px;
+   position: relative;
+   padding-left: 40px;
+   height: 36px;
+}
+.tel::before{
+   content:url(icon/tel.png);
+   position: absolute;
+   left: 10px;
+   top: 2px;
+}
+
+.soc_footer{
+   a{
+      padding-right: 16px;
    }
 }
 
-
-.container{
-   width: 90%;
-   margin: 0 auto;
+      @media all and (max-width: 860px){
+        
+         .footer{
+            flex-direction: column;
+            padding-top: 40px;
+               .logo_footer{
+                  width: 60%;
+               }
+                .soc_footer{
+                  padding-top: 20px;
+               }
+               .text-footer{
+                  padding-top: 10px;
+               }
+               .footer_informBox{
+                   width: 40%;
+                     P:first-child{
+                        padding-bottom: 10px;
+                  }}
+         }
 }
 
-.tel::before{
-   content:url(icon/tel.png);
-   bottom: 200px;
+@media all and (max-width: 600px){
+   
+   .footer{
+      display: block;
+     .soc_footer{
+      padding-top: 0;
+   } 
+   .text-footer{
+      padding: 15px 0 40px 20px;
+   }
+   .footer_informBox{
+      padding-left: 20px;
+      width: 100%;
+         P:first-child{
+            font-size: 18px;
+      } 
+   }
+   }
 }
-
-//       @media all and (max-width: 376px){
-//          .footer{
-//             .footer-wrapper {
-//                .footer-logo{
-//                   padding-left: 0   ;
-//                }
-//                .footer-list{
-//                margin-left: 20px;
-//                .footer-list-nav_block{
-//                flex-direction: column;
-//                 ul:nth-child(3){
-//                display: none;  
-//                }
-//               ul:nth-child(1){
-//                  display: flex;
-//                flex-wrap: wrap;
-//                li{
-//                   margin-right:45px;
-//                }  
-//               }
-//            }
-//          }
-//       }
-//    }
-// }

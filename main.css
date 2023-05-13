@@ -130,7 +130,7 @@ main {
   background-color: #fff;
 }
 
-.menu-osnova h1 {
+.menu-osnova h2 {
   padding-top: 35px;
   font-size: 40px;
   font-weight: 600;
@@ -217,38 +217,92 @@ main {
 .footer {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  height: 280px;
+  height: 200px;
+  align-content: center;
+  padding-left: 30px;
 }
 
 .logo_footer {
   width: 50%;
 }
 
-.tel_footer, .soc_footer {
-  width: 20%;
+.footer_informBox {
+  width: 25%;
   font-weight: 400;
-  font-size: 24px;
   font-style: normal;
 }
-.tel_footer P, .soc_footer P {
-  padding-bottom: 10px;
+.footer_informBox P:first-child {
+  padding-bottom: 20px;
+  font-size: 24px;
 }
 
-.container {
-  width: 90%;
-  margin: 0 auto;
+.tel {
+  font-size: 16px;
+  position: relative;
+  padding-left: 40px;
+  height: 36px;
 }
 
 .tel::before {
   content: url(icon/tel.png);
-  bottom: 200px;
+  position: absolute;
+  left: 10px;
+  top: 2px;
 }
 
+.soc_footer a {
+  padding-right: 16px;
+}
+
+@media all and (max-width: 860px) {
+  .footer {
+    flex-direction: column;
+    padding-top: 40px;
+  }
+  .footer .logo_footer {
+    width: 60%;
+  }
+  .footer .soc_footer {
+    padding-top: 20px;
+  }
+  .footer .text-footer {
+    padding-top: 10px;
+  }
+  .footer .footer_informBox {
+    width: 40%;
+  }
+  .footer .footer_informBox P:first-child {
+    padding-bottom: 10px;
+  }
+}
+@media all and (max-width: 600px) {
+  .footer {
+    display: block;
+  }
+  .footer .soc_footer {
+    padding-top: 0;
+  }
+  .footer .text-footer {
+    padding: 15px 0 40px 20px;
+  }
+  .footer .footer_informBox {
+    padding-left: 20px;
+    width: 100%;
+  }
+  .footer .footer_informBox P:first-child {
+    font-size: 18px;
+  }
+}
 body {
   margin: 0;
   padding: 0;
   font-family: "Raleway", sans-serif;
+  height: 100%;
+}
+
+.container {
+  max-width: 1210px;
+  margin: 0 auto;
   height: 100%;
 }
 
