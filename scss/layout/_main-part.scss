@@ -12,7 +12,7 @@
 }
 .nav__catalog__item-button:hover{
    background-color: #FFAB08;
-
+   
 }
 
 .nav__catalog{
@@ -20,6 +20,9 @@
    justify-content: center;
    background-color:#f9f9f9;
    padding-top: 40px;
+}
+.nav__catalog{
+   position: relative;
 }
 
 .main__content{
