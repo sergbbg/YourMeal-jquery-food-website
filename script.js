@@ -3,8 +3,10 @@ window.addEventListener('DOMContentLoaded', () => {
 //basket
 const cartWrapper = document.querySelector('.cart-wrapper');
 
-window.addEventListener('click', function (event) {
 
+let num =1;
+window.addEventListener('click', function (event) {
+  
   if (event.target.hasAttribute('data-cart')) {
     const card = event.target.closest('.menu-item');
 
@@ -14,13 +16,31 @@ window.addEventListener('click', function (event) {
       title: card.querySelector('.item-title').innerText,
       weight: card.querySelector('.item-weight').innerText,
       price: card.querySelector('.price').innerText,
+      
       // counter: card.querySelector('[data-counter]').innerText,
     }
+    
+
+    // if(num.length < 0){
+    //   num = Number(productInfo.id);
+    // }else{
+    //   num +=1;
+    // }
+    
     const itemInCart = cartWrapper.querySelector(`[data-id="${productInfo.id}"]`);
     if (itemInCart) {
-      const counterElement = itemInCart.querySelector('[data-counter]');
-      counterElement.innerText = parseInt(counterElement.innerText) + parseInt(productInfo.counter);
+      // const counterElement = itemInCart.querySelector('[data-counter]');
+      // counterElement.innerText = parseInt(counterElement.innerText) + parseInt(productInfo.counter);
+      // num = num+1;
+      //// console.log(productInfo.num)
+      const counterValue = itemInCart.querySelector('.items__current');
+      let  a = Number(counterValue.innerHTML);
+      a++
+    counterValue.innerHTML = a;
+    console.log(a);
     } else {
+      
+      num =1;
       const cartItemHTML = `
       <div class="cart-item" data-id="${productInfo.id}">
       <div class="cart-item__img">
@@ -32,7 +52,7 @@ window.addEventListener('click', function (event) {
          <p>${productInfo.price}</p>
          <div class="items items--small counter-wrapper">
 												<div class="items__control" data-action="minus">-</div>
-												<div class="items__current" data-counter="">1</div>
+												<div class="items__current" id="counter-value" >1</div>
 												<div class="items__control" data-action="plus">+</div>
 			</div>
       </div>
@@ -41,7 +61,7 @@ window.addEventListener('click', function (event) {
 
       cartWrapper.insertAdjacentHTML('beforeend', cartItemHTML);
     }
-
+   
   }
 
 })
