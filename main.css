@@ -116,14 +116,6 @@
   display: flex;
 }
 
-.basket {
-  width: 30%;
-  display: flex;
-  justify-content: center;
-  padding-top: 122px;
-  height: 70px;
-}
-
 main {
   background-color: #f9f9f9;
 }
@@ -323,6 +315,24 @@ nav {
   line-height: 16px;
   border-radius: 25px;
   min-width: 100px;
+}
+
+.items-basket {
+  display: flex;
+  justify-content: center;
+}
+
+.cart-item__img img {
+  width: 126px;
+  height: 100px;
+}
+
+.basket {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  padding-top: 122px;
+  height: auto;
 }
 
 body {

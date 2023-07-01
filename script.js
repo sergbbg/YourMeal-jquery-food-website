@@ -50,7 +50,7 @@ window.addEventListener('click', function (event) {
          <h4>${productInfo.title}</h4>
          <p>${productInfo.weight}</p>
          <p>${productInfo.price}</p>
-         <div class="items items--small counter-wrapper">
+         <div class="items-basket items--small counter-wrapper">
 												<div class="items__control" data-action="minus">-</div>
 												<div class="items__current" id="counter-value" >1</div>
 												<div class="items__control" data-action="plus">+</div>
@@ -63,6 +63,18 @@ window.addEventListener('click', function (event) {
     }
    
   }
+
+
+///корзина
+const counterBasket = document.querySelector('.items-basket');
+
+
+
+counterBasket.addEventListener('click',function(e){
+  if(e.target.dataset.action === 'minus'){
+    console.log("Ffff");
+  }
+})
 
 })
 
