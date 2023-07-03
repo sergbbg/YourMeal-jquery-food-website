@@ -114,6 +114,7 @@
 
 .main__content {
   display: flex;
+  position: relative;
 }
 
 main {
@@ -140,7 +141,7 @@ main {
 }
 
 .menu-item {
-  margin: 0 30px 30px 0;
+  margin: 0 28px 30px 0;
   background-color: #fff;
   border-radius: 10px;
   padding: 10px;
@@ -332,6 +333,8 @@ nav {
   display: flex;
   justify-content: center;
   padding-top: 122px;
+  position: absolute;
+  right: 0;
 }
 
 body {
