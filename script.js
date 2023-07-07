@@ -47,15 +47,18 @@ window.addEventListener('click', function (event) {
       <img src="${productInfo.imgSrc}" alt="${productInfo.title}">
    </div>
       <div>
+      <div class=""> 
          <h4>${productInfo.title}</h4>
          <p>${productInfo.weight}</p>
          <p>${productInfo.price}</p>
+       </div>  
+       </div>
          <div class="items-basket items--small counter-wrapper">
 												<div class="items__control" data-action="minus">-</div>
 												<div class="items__current" id="counter-value" >1</div>
 												<div class="items__control" data-action="plus">+</div>
 			</div>
-      </div>
+      
       </div>
       `
 

@@ -35,11 +35,7 @@ main{
    background-color: #f9f9f9;
 }
 
-.basket-widnow{
-   width: 60%;
-   text-align:center;
-   background-color:#fff;
-}
+
 
 .menu-osnova{
    h2{
@@ -54,6 +50,7 @@ main{
    display: flex;
    padding-top: 35px;
    flex-wrap: wrap;
+   justify-content: center;
 }
 
 .menu-item{
@@ -99,7 +96,7 @@ cursor: pointer;
 }
 
 .menu{
-   width: 70%;
+   width: 80%;
 }
 
 // .counter_menu{

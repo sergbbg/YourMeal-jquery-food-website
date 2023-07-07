@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .nav__catalog__item-button {
   padding: 9px 14px;
   border: 1px solid #fff;
@@ -121,12 +122,6 @@ main {
   background-color: #f9f9f9;
 }
 
-.basket-widnow {
-  width: 60%;
-  text-align: center;
-  background-color: #fff;
-}
-
 .menu-osnova h2 {
   padding-top: 35px;
   font-size: 40px;
@@ -138,6 +133,7 @@ main {
   display: flex;
   padding-top: 35px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .menu-item {
@@ -183,7 +179,7 @@ main {
 }
 
 .menu {
-  width: 70%;
+  width: 80%;
 }
 
 .show {
@@ -321,6 +317,13 @@ nav {
 .items-basket {
   display: flex;
   justify-content: center;
+  border-radius: 12px;
+  background: #F2F2F3;
+  width: 84px;
+  height: 40px;
+  flex-shrink: 0;
+  align-items: center;
+  margin: auto;
 }
 
 .cart-item__img img {
@@ -328,18 +331,58 @@ nav {
   height: 100px;
 }
 
+.basket-widnow {
+  width: 90%;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 18px;
+}
+
 .basket {
-  width: 30%;
+  width: 20%;
   display: flex;
   justify-content: center;
   padding-top: 122px;
   position: absolute;
-  right: 0;
+  right: 5%;
+}
+
+.basket-header {
+  height: 60px;
+  border-bottom: 1px solid #F2F2F3;
+  width: 86%;
+  margin: 0 auto;
+}
+.basket-header h2 {
+  padding-top: 22px;
+  font-size: 24px;
+  font-style: normal;
 }
 
 .cart-wrapper {
   height: 100vh;
   overflow-y: scroll;
+}
+
+/* Работает в Firefox */
+.cart-wrapper {
+  scrollbar-width: thin;
+  scrollbar-color: #ffab08 #ffffff;
+}
+
+/* Работает в Chrome, Edge и Safari */
+.cart-wrapper::-webkit-scrollbar {
+  width: 12px;
+}
+
+.cart-wrapper::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.cart-wrapper::-webkit-scrollbar-thumb {
+  background-color: #ffab08;
+  border-radius: 20px;
+  border: 3px solid #fff;
 }
 
 body {
