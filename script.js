@@ -47,10 +47,10 @@ window.addEventListener('click', function (event) {
       <img src="${productInfo.imgSrc}" alt="${productInfo.title}">
    </div>
       <div>
-      <div class=""> 
+      <div class="cart-text"> 
          <h4>${productInfo.title}</h4>
-         <p>${productInfo.weight}</p>
-         <p>${productInfo.price}</p>
+         <pclass="cart-text-weight">${productInfo.weight}</pclass=>
+         <p class="cart-text-bold">${productInfo.price}</p>
        </div>  
        </div>
          <div class="items-basket items--small counter-wrapper">
